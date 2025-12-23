@@ -1,7 +1,8 @@
 :root {
-  --primary-color: #1e3a8a;
-  --secondary-color: #3b82f6;
-  --accent-color: #f59e0b;
+  --primary-color: #000957;
+  --secondary-color: #344CB7;
+  --accent-color: #FFEB00;
+  --tertiary-color: #577BC1;
   --text-dark: #1f2937;
   --text-light: #6b7280;
   --bg-light: #f9fafb;
@@ -53,7 +54,7 @@ body {
 }
 
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000957 0%, #344CB7 50%, #577BC1 100%);
   color: white;
   padding: 150px 0 100px;
   text-align: center;
@@ -102,7 +103,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #fbbf24;
+  color: #FFEB00;
 }
 
 .hero-description {
@@ -177,7 +178,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(52, 76, 183, 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -187,10 +188,10 @@ body {
 
 .objective-card:hover {
   transform: translateY(-5px) translateX(5px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 20px rgba(52, 76, 183, 0.2);
   border-left-width: 6px;
   border-left-color: var(--primary-color);
-  background: linear-gradient(to right, #f8f9ff, white);
+  background: linear-gradient(to right, #f0f2ff, white);
 }
 
 .objective-card:hover h5 {
@@ -211,7 +212,7 @@ body {
 }
 
 .theme-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000957 0%, #344CB7 50%, #577BC1 100%);
   color: white;
   padding: 2rem;
   border-radius: 15px;
@@ -241,8 +242,8 @@ body {
 
 .theme-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-  background: linear-gradient(135deg, #7c8ef0 0%, #8a5fb8 100%);
+  box-shadow: 0 15px 35px rgba(0, 9, 87, 0.4);
+  background: linear-gradient(135deg, #1a1f6b 0%, #4a5fc9 50%, #6b8dd4 100%);
 }
 
 .theme-card h3 {
@@ -290,9 +291,9 @@ body {
 
 .scope-item:hover {
   transform: translateX(8px) translateY(-3px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+  box-shadow: 0 6px 20px rgba(255, 235, 0, 0.25);
   border-left-width: 6px;
-  background: linear-gradient(to right, #fffbf0, white);
+  background: linear-gradient(to right, #fffef0, white);
 }
 
 .scope-item:hover h6 {
@@ -313,7 +314,7 @@ body {
 }
 
 .date-card {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #344CB7 0%, #577BC1 100%);
   color: white;
   padding: 1.5rem;
   border-radius: 10px;
@@ -346,14 +347,14 @@ body {
 }
 
 .date-card-highlight {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  border: 3px solid #fff;
-  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+  background: linear-gradient(135deg, #000957 0%, #344CB7 50%, #577BC1 100%);
+  border: 3px solid #FFEB00;
+  box-shadow: 0 4px 15px rgba(255, 235, 0, 0.4);
 }
 
 .date-card-highlight:hover {
-  box-shadow: 0 12px 30px rgba(240, 147, 251, 0.6);
-  border-color: #fbbf24;
+  box-shadow: 0 12px 30px rgba(255, 235, 0, 0.6);
+  border-color: #FFEB00;
 }
 
 .date-step-number {
@@ -446,7 +447,7 @@ body {
 
 .btn-primary-custom:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 5px 15px rgba(52, 76, 183, 0.4);
 }
 
 .btn-outline-custom {
@@ -486,7 +487,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(52, 76, 183, 0.05), transparent);
   transition: left 0.5s;
 }
 
@@ -500,14 +501,29 @@ body {
 }
 
 .speaker-photo {
-  width: 150px;
-  height: 150px;
+  width: auto;
+  min-height: 100px;
+  height: auto;
   margin: 0 auto 1.5rem;
-  border-radius: 50%;
+  border-radius: 8px;
   overflow: hidden;
   border: 4px solid var(--bg-light);
+  padding: 8px;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-photo img {
+  width: auto;
+  height: 100px;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s ease;
 }
 
 .speaker-photo::after {
@@ -517,26 +533,13 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 50%;
   border: 3px solid transparent;
   transition: all 0.3s ease;
 }
 
 .speaker-card:hover .speaker-photo {
-  border-color: var(--secondary-color);
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-}
-
-.speaker-card:hover .speaker-photo::after {
-  border-color: var(--primary-color);
-}
-
-.speaker-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(52, 76, 183, 0.3);
 }
 
 .speaker-card:hover .speaker-photo img {
@@ -554,6 +557,7 @@ body {
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  margin-top: auto;
   transition: all 0.3s ease;
 }
 
@@ -588,8 +592,16 @@ body {
 
 @media (max-width: 768px) {
   .speaker-photo {
-    width: 120px;
-    height: 120px;
+    width: auto;
+    min-height: 80px;
+    height: auto;
+    padding: 6px;
+  }
+
+  .speaker-photo img {
+    width: auto;
+    height: 80px;
+    max-width: 100%;
   }
 
   .speaker-name {
@@ -672,7 +684,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 9, 87, 0.05), transparent);
   transition: left 0.5s;
 }
 
@@ -703,7 +715,7 @@ body {
 .co-host-card:hover .co-host-logo {
   transform: scale(1.1) rotate(5deg);
   border-color: var(--secondary-color);
-  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 6px 15px rgba(52, 76, 183, 0.25);
 }
 
 .co-host-logo img {
@@ -813,12 +825,12 @@ body {
   justify-content: center;
   color: white;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(52, 76, 183, 0.3);
 }
 
 .zoom-link-card:hover .zoom-icon {
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 6px 20px rgba(52, 76, 183, 0.4);
 }
 
 .zoom-title {
@@ -847,7 +859,7 @@ body {
 
 .zoom-link-card:hover .zoom-link-box {
   border-color: var(--secondary-color);
-  background: linear-gradient(to right, #f8f9ff, var(--bg-light));
+  background: linear-gradient(to right, #f0f2ff, var(--bg-light));
 }
 
 .zoom-link-text {
