@@ -507,7 +507,6 @@ body {
   margin: 0 auto 1.5rem;
   border-radius: 8px;
   overflow: hidden;
-  border: 4px solid var(--bg-light);
   padding: 8px;
   transition: all 0.3s ease;
   position: relative;
@@ -539,7 +538,6 @@ body {
 
 .speaker-card:hover .speaker-photo {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(52, 76, 183, 0.3);
 }
 
 .speaker-card:hover .speaker-photo img {
@@ -714,8 +712,6 @@ body {
 
 .co-host-card:hover .co-host-logo {
   transform: scale(1.1) rotate(5deg);
-  border-color: var(--secondary-color);
-  box-shadow: 0 6px 15px rgba(52, 76, 183, 0.25);
 }
 
 .co-host-logo img {
